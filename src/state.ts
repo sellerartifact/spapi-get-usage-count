@@ -1,29 +1,29 @@
 // Enumeration of API operations that require computing usage for GET requests
 export enum GetApiOperationEnums {
-  getCatalogItem = 1,
-  searchCatalogItems,
+  getCatalogItem = 'getCatalogItem',
+  searchCatalogItems = 'searchCatalogItems',
 
-  getFeedDocument,
-  getFeed,
+  getFeedDocument = 'getFeedDocument',
+  getFeed = 'getFeed',
 
-  listFinancialEventsByOrderId,
+  listFinancialEventsByOrderId = 'listFinancialEventsByOrderId',
 
-  getListingsItem,
-  searchListingsItems,
+  getListingsItem = 'getListingsItem',
+  searchListingsItems = 'searchListingsItems',
 
-  getOrders,
-  getOrder,
-  getOrderAddress,
-  getOrderItems,
+  getOrders = 'getOrders',
+  getOrder = 'getOrder',
+  getOrderAddress = 'getOrderAddress',
+  getOrderItems = 'getOrderItems',
 
-  getPricing,
+  getPricing = 'getPricing',
   // 这个接口目前不计费
-  // getItemOffers: 0,
+  // getItemOffers = 'getItemOffers',
 
-  getReport,
-  getReportDocument,
+  getReport = 'getReport',
+  getReportDocument = 'getReportDocument',
 
-  getMarketplaceParticipations,
+  getMarketplaceParticipations = 'getMarketplaceParticipations',
 }
 
 export const getApiUrlPathMap: {

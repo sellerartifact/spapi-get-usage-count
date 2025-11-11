@@ -1,7 +1,12 @@
 import { expect, test } from 'vitest';
-import { squared } from '../src/index';
+import { checkIsNeedComputeUsageByGetApi, transformGetApiOperationToUrlPath } from '../src/index';
 
-test('squared', () => {
-  expect(squared(2)).toBe(4);
-  expect(squared(12)).toBe(144);
+test('checkIsNeedComputeUsageByGetApi', () => {
+  expect(checkIsNeedComputeUsageByGetApi('getFeed')).toBe(true);
+  expect(checkIsNeedComputeUsageByGetApi('searchListingsItems')).toBe(true);
+});
+
+test('transformGetApiOperationToUrlPath', () => {
+  expect(transformGetApiOperationToUrlPath('getFeed')).toBe('/feeds/2021-06-30/documents/{feedDocumentId}');
+  expect(transformGetApiOperationToUrlPath('searchListingsItems')).toBe('/listings/2021-08-01/items/{sellerId}');
 });
